@@ -42,7 +42,7 @@ fourier = np.fft.fft(x)
 freqs = np.fft.fftfreq(len(x)) * fs
 fig2, ax2= plt.subplots()
 ax2.stem(freqs, np.abs(fourier))
-ax2.set_xlim(- 3200, 3200)
+ax2.set_xlim(0, 3200)
 plt.show()
 
 sd.play(x, fs)
