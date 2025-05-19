@@ -26,12 +26,23 @@ t = np.linspace(0, d, d * fs, endpoint=False)
 #freq = [270, 540, 810, 1080]
 #amp  = [0.35, 0.30, 0.25, 0.10]
 
+#1000Hz
+#freq = [1000]
+#amp = [1.0]
+
 x = sum([amp[i] * np.sin(2 * np.pi * freq[i] * t) for i in range(len(freq))])
 
-plot_d = 0.01  # 10ミリ秒だけプロット
+plot_d = 0.01  # 10ms
 plt.plot(t[:int(fs * plot_d)], x[:int(fs * plot_d)])
-plt.title("Waveform ("+str(plot_d)+" ms)")
+plt.title("Waveform ("+str(plot_d)+" s)")
 plt.grid(True)
+plt.show()
+
+fourier = np.fft.fft(x)
+freqs = np.fft.fftfreq(len(x)) * fs
+fig2, ax2= plt.subplots()
+ax2.stem(freqs, np.abs(fourier))
+ax2.set_xlim(- 3200, 3200)
 plt.show()
 
 sd.play(x, fs)
