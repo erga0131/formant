@@ -21,11 +21,11 @@ vowel_params = {
     },
     "う": {
         "freq": [freq*1, freq*2, freq*4, freq*5, freq*6],
-        "amp":  [0.32, 0.21, 0.04, 0.04, 0.02]
+        "amp":  [0.45, 0.20, 0.05, 0.05, 0.02]
     },
     "え": {
-        "freq": [freq*1, freq*2, freq*3, freq*4, freq*6, freq*7, freq*8],
-        "amp":  [0.20, 0.30, 0.02, 0.02, 0.02, 0.15, 0.01]
+        "freq": [freq*1, freq*2, freq*3, freq*8, freq*9],
+        "amp":  [0.20, 0.40, 0.03, 0.05, 0.01]
     },
     "お": {
         "freq": [freq*1, freq*2, freq*3, freq*4],
