@@ -4,7 +4,7 @@ import sounddevice as sd
 text = "1199##9 6633221 9966332 9966332 1199##9 6633221"
 
 fs = 44100
-d = 0.8
+d = 0.5
 t = np.linspace(0, d, int(d * fs), endpoint=False)
 
 vowel_params = {
